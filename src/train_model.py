@@ -5,7 +5,7 @@ import pickle
 
 
 def train_model(animeData,model_path) :
-    animeData = pd.read_csv("data/AnimeWorld.csv")
+    animeData = pd.read_csv("/home/adila/Projects/test/data/AnimeWorld.csv")
     animeData.reset_index(inplace=True)
     features = ['Genre', 'Description', 'Studio']
     for feature in features :
@@ -26,5 +26,5 @@ def train_model(animeData,model_path) :
         pickle.dump(model, f)
 
 if __name__ == "__main__" :
-    train_model('data/AnimeWorld.csv', 'models/anime_recommender_model.pkl')
+    train_model('/home/adila/Projects/test/data/AnimeWorld.csv', '/home/adila/Projects/test/models/anime_recommender_model.pkl')
 
