@@ -5,7 +5,7 @@ import pickle
 
 
 def train_model(animeData,model_path) :
-    animeData = pd.read_csv("AnimeWorld.csv")
+    animeData = pd.read_csv("data/AnimeWorld.csv")
     animeData.reset_index(inplace=True)
     features = ['Genre', 'Description', 'Studio']
     for feature in features :
