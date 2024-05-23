@@ -1,4 +1,4 @@
-from recommend_anime import load_model, recommend_anime
+from src.recommend_anime import load_model, recommend_anime
 
 if __name__ == "__main__":
     model = load_model('models/anime_recommender_model.pkl')
