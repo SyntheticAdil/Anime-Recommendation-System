@@ -39,7 +39,7 @@ def recommend_anime(anime_name, model) :
 
 
 if __name__ == "__main__":
-    model = load_model('models/anime_recommender_model.pkl')
+    model = load_model('/home/adila/Projects/test/models/anime_recommender_model.pkl')
     anime_name = input("Enter your favourite anime (in Japanese): ")
     recommendations = recommend_anime(anime_name, model)
 
