@@ -34,9 +34,10 @@ def recommend_anime(anime_name, model) :
 
         recommended_animes = []
         for i, (index,score) in enumerate(sortedSimilarAnimes[:10],1) :
-            title = animeData[animeData.index==index]['Anime'].values[0]
-            recommended_animes.append((i, title))    
-
+            title = animeData[animeData.index==index]['Anime'].values
+            if len(title) > 0 :
+                recommended_animes.append((i, title))    
+        return recommended_animes
 
 if __name__ == "__main__":
     model = load_model('/home/adila/Projects/test/models/anime_recommender_model.pkl')
