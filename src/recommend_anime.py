@@ -17,25 +17,25 @@ def recommend_anime(anime_name, model) :
 
     if not findCloseMatch:
         return "No close match found."
-
-    close_match = findCloseMatch[0]
-    indexOfTheAnime = animeData[animeData.Anime == close_match]['index'].values[0]
+    if findCloseMatch :
+        close_match = findCloseMatch[0]
+        indexOfTheAnime = animeData[animeData.Anime == close_match]['index'].values[0]
 
     # Create similarity_score list for all animes
-    similarity_score = []
+        similarity_score = []
 
-    for i in range(len(animeData)):
-        anime_title = animeData.loc[i, 'Anime']
-        score = difflib.SequenceMatcher(None, anime_name, anime_title).ratio()
-        similarity_score.append((animeData.loc[i, 'index'], score))
+        for i in range(len(animeData)):
+            anime_title = animeData.loc[i, 'Anime']
+            score = difflib.SequenceMatcher(None, anime_name, anime_title).ratio()
+            similarity_score.append((animeData.loc[i, 'index'], score))
 
     # Sort similarity scores in descending order
-    sortedSimilarAnimes = sorted(similarity_score, key=lambda x: x[1], reverse=True)
+        sortedSimilarAnimes = sorted(similarity_score, key=lambda x: x[1], reverse=True)
 
-    recommended_animes = []
-    for i, (index, score) in sortedSimilarAnimes[:10] :
-        title = animeData.iloc[index]['Anime']
-        recommended_animes.append((i, title))
+        recommended_animes = []
+        for i, (index,score) in enumerate(sortedSimilarAnimes[:10],1) :
+            title = animeData[animeData.index==index]['Anime'].values[0]
+            recommended_animes.append((i, title))    
 
 
 if __name__ == "__main__":
