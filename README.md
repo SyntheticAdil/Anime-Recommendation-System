@@ -57,4 +57,4 @@ https://github.com/SyntheticAdil/AnimeRecSys/assets/144491244/6738bae5-4e36-4f7f
 
 ## Contact
 
-For any inquiries or feedback, please don't hesitate to reach me out on my [email](adilahmad9211@gmail.com)
+For any inquiries or feedback, please don't hesitate to reach out to me at my email : **adilahmad9211@gmail.com**
