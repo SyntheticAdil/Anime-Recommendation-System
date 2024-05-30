@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project suggests anime based on your favorite anime input. Using natural language processing and machine learning techniques, it computes similarity scores between anime titles and recommends the top 10 most similar animes.
+I got tired of recommending people animes so I made a script which recommends it.
+
+This project suggests anime based on your favourite anime input. Using natural language processing and machine learning techniques, it computes similarity scores between anime titles and recommends the top 10 most similar animes.
 
 ## Features 
 
