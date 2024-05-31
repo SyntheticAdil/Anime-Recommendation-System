@@ -9,6 +9,7 @@ This project suggests anime based on your favourite anime input. Using natural l
 ## Features 
 
 • **Similarity Matching**: Utilizes sequence matching to find and recommend similar anime titles.
+
 • **Interactive CLI**: Users can input their favorite anime and receive a list of recommendations directly in the terminal.
 
 • **Model Persistence**: The recommendation model is saved and loaded using pickle for efficient reuse.
